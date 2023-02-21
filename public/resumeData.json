@@ -1,0 +1,111 @@
+{
+  "main": {
+    "name":"GASTON NAHUEL TERMINIELLO",
+    "description":"DESARROLLADOR WEB FULL-STACK",
+    "image":"fotoC.V.jpeg",
+    "bio":"Hola ,soy Gaston Terminiello. A los 13 años descrubri mi interes por la informatica y programacion , actualmente estoy en busca de nuevos desafios ",
+    "contactmessage":"Cualquier consulta no dudes en enviar un mensaje.",
+    "email": "terminiello.gastonnahuel@gmail.com",
+    "phone": "221-5414540",
+    "github":"https://github.com/Gastonnter",
+    "project":"https://github.com/Gastonnter?tab=repositories",
+    "address":{
+      "street":"",
+      "city":"La Plata",
+      "state":"Buenos Aires   ",
+      "zip": "1900"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"curriculum.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/gaston-terminiello/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/Gastonnter",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"Teclab",
+        "degree":" Tecnico Superior Data Science",
+        "graduated":"Actualmente",
+        "description":""
+      },
+      {
+        "school":"Digital House",
+        "degree":"Desarrollador Web Full-Stack",
+        "graduated":"febrero 2023",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Servicio Penitenciario Bonaerense",
+        "title":"Informatica",
+        "years":"julio 2021 - actualmente",
+        "description":"Actualmente estoy trabajando en el area informatica de una auditoria, cuyo labrol se encarga de el manejo y uso de aplicaciones en la dependencia  "
+      }
+    ],
+    "skills":[
+      {
+        "name":"Javascript",
+        "level":"80%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"55%"
+      },
+      {
+        "name":"NodeJs",
+        "level":"60%"
+      },
+      {
+        "name":"CSS3",
+        "level":"90%"
+      },
+      {
+        "name":"MySQL",
+        "level":"60%"
+      },
+      {
+        "name":"HTML5",
+        "level":"90%"
+      }
+      
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"01.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      }
+    
+    ]
+  }
+}
