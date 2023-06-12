@@ -2,6 +2,86 @@ import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mailerState: {
+        name: "",
+        email: "",
+        asunto: "",
+        message: "",
+      },
+    };
+  }
+
+  submitEmail = async (e) => {
+    e.preventDefault();
+    const { mailerState } = this.state;
+    console.log({ mailerState });
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ mailerState }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "success") {
+          alert("Message Sent");
+        } else if (resData.status === "fail") {
+          alert("Message failed to send");
+        }
+      })
+      .then(() => {
+        this.setState({
+          mailerState: {
+            name: "",
+            email: "",
+            asunto: "",
+            message: "",
+          },
+        });
+      });
+  };
+
+  handleStateChange = (e) => {
+    const { mailerState } = this.state;
+    this.setState({
+      mailerState: {
+        ...mailerState,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
+  componentDidMount() {
+    this.setState({
+      mailerState: {
+        name: "",
+        email: "",
+        asunto: "",
+        message: "",
+      },
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        mailerState: {
+          name: "",
+          email: "",
+          asunto: "",
+          message: "",
+        },
+      });
+    }
+  }
+
   render() {
     if (!this.props.data) return null;
 
@@ -32,7 +112,12 @@ class Contact extends Component {
         <div className="row">
           <Slide left duration={1000}>
             <div className="eight columns">
-              <form action="" method="post" id="contactForm" name="contactForm">
+              <form
+                action=""
+                method="post"
+                id="contactForm"
+                name="contactForm"
+              >
                 <fieldset>
                   <div>
                     <label htmlFor="contactName">
@@ -40,11 +125,12 @@ class Contact extends Component {
                     </label>
                     <input
                       type="text"
-                      defaultValue=""
                       size="35"
-                      id="contactName"
-                      name="contactName"
-                      onChange={this.handleChange}
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                      onChange={this.handleStateChange}
+                      value={this.state.mailerState.name}
                     />
                   </div>
 
@@ -53,24 +139,26 @@ class Contact extends Component {
                       Email <span className="required">*</span>
                     </label>
                     <input
+                      placeholder="Your Email"
                       type="text"
-                      defaultValue=""
                       size="35"
-                      id="contactEmail"
-                      name="contactEmail"
-                      onChange={this.handleChange}
+                      id="email"
+                      name="email"
+                      onChange={this.handleStateChange}
+                      value={this.state.mailerState.email}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contactSubject">Sujeto</label>
+                    <label htmlFor="contactSubject">Asunto</label>
                     <input
+                      placeholder="Asunto"
                       type="text"
-                      defaultValue=""
                       size="35"
-                      id="contactSubject"
-                      name="contactSubject"
-                      onChange={this.handleChange}
+                      id="asunto"
+                      name="asunto"
+                      onChange={this.handleStateChange}
+                      value={this.state.mailerState.asunto}
                     />
                   </div>
 
@@ -79,15 +167,20 @@ class Contact extends Component {
                       Mensaje <span className="required">*</span>
                     </label>
                     <textarea
+                      placeholder="Mensaje"
                       cols="50"
                       rows="15"
-                      id="contactMessage"
-                      name="contactMessage"
+                      id="message"
+                      name="message"
+                      onChange={this.handleStateChange}
+                      value={this.state.mailerState.message}
                     ></textarea>
                   </div>
 
                   <div>
-                    <button className="submit">Enviar</button>
+                    <button className="submit" onClick={this.submitEmail}>
+                      Enviar
+                    </button>
                     <span id="image-loader">
                       <img alt="" src="images/loader.gif" />
                     </span>
@@ -97,7 +190,8 @@ class Contact extends Component {
 
               <div id="message-warning"> Error boy</div>
               <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
+                <i className="fa fa-check"></i>Your message was sent, thank
+                you!
                 <br />
               </div>
             </div>

@@ -3,7 +3,7 @@
     "name":"GASTON NAHUEL TERMINIELLO",
     "description":"DESARROLLADOR WEB FULL-STACK",
     "image":"fotoC.V.jpeg",
-    "bio":"Hola ,soy Gaston Terminiello. A los 13 años descrubri mi interes por la informatica y programacion , actualmente estoy en busca de nuevos desafios ",
+    "bio":"Hola ,soy Gaston Terminiello. Soy una persona con gran adaptabilidad y deseos de superación , que aprende rápido y se caracteriza por estar en búsqueda de información útil y actualizada ",
     "contactmessage":"Cualquier consulta no dudes en enviar un mensaje.",
     "email": "terminiello.gastonnahuel@gmail.com",
     "phone": "221-5414540",
@@ -63,10 +63,16 @@
     ],
     "work":[
       {
-        "company":"Servicio Penitenciario Bonaerense",
+        "company":"Ministerio de Justicia, Direccion de Asuntos Internos y Derechos Humanos",
         "title":"Informatica",
-        "years":"julio 2021 - actualmente",
-        "description":"Actualmente estoy trabajando en el area informatica de una auditoria, cuyo labrol se encarga de el manejo y uso de aplicaciones en la dependencia  "
+        "years":"julio 2021 - Abril 2023",
+        "description":"Encargado de Sistema. Gestion de tareas y control de las mismas."
+      },
+      {
+        "company":"Ministerio de Justicia, Direccion de Desarrollo de Software",
+        "title":"Desarrollador Backend",
+        "years":"Abril 2023 - actualidad",
+        "description":"Tareas desempeñadas en el equipo de desarrollo Back-End."   
       }
     ],
     "skills":[
@@ -91,19 +97,28 @@
         "level":"60%"
       },
       {
-        "name":"HTML5",
+        "name":"Typescript",
+        "level":"90%"
+      },
+      {
+        "name":"MongoDB",
         "level":"90%"
       }
-      
     ]
   },
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title":"SIS Sistema Intengral de Solicitudes",
+        "category":"Privado",
+        "image":"sis.png",
+        "url":"https://sis.mjus.gba.gob.ar/"
+      },
+      {
+        "title":"Mejor Vendelo",
+        "category":"E-Commerce",
+        "image":"sis.png",
+        "url":"https://sis.mjus.gba.gob.ar/"
       }
     
     ]
