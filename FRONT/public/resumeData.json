@@ -109,16 +109,32 @@
   "portfolio":{
     "projects": [
       {
-        "title":"SIS Sistema Intengral de Solicitudes",
+        "title":"SIS",
         "category":"Privado",
-        "image":"sis.png",
-        "url":"https://sis.mjus.gba.gob.ar/"
+        "image":"FOTOSIS.jpg",
+        "url":"https://sis.mjus.gba.gob.ar/",
+        "text": "Sistema Intengral de Solicitudes"
       },
       {
         "title":"Mejor Vendelo",
         "category":"E-Commerce",
-        "image":"sis.png",
-        "url":"https://sis.mjus.gba.gob.ar/"
+        "image":"mejorVendelo.png",
+        "url":"",
+        "text": "Comercio Idumentaria"
+      },
+      {
+        "title":"Pimienta y Sal",
+        "category":"E-Commerce",
+        "image":"pimientaysal.png",
+        "url":"",
+        "text":"Comercio Gastronomico"
+      },
+      {
+        "title":"Crud Mern",
+        "category":"backend",
+        "image":"crud-mern-stack.png",
+        "url":"",
+        "text": "CRUD Basico en stack MERN."
       }
     
     ]
