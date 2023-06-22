@@ -2,9 +2,14 @@
   "name": "back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +19,7 @@
     "curl": "^0.1.4",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "nodemailer": "^6.9.3"
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22"
   }
 }
